@@ -136,7 +136,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: `Instruction: \n${message}\n Detailed Response: ` })
+                body: JSON.stringify({ prompt: `${message}` })
             });
             const data = await response.json();
 
