@@ -120,7 +120,7 @@
             chatMessages.innerHTML += `<div class="message">User: ${message}</div>`;
 
             // Display loading message with typewriter effect
-            let loadingMessage = 'Nexa: Loading';
+            let loadingMessage = 'Glance: Loading';
             const loadingElement = document.createElement('div');
             loadingElement.className = 'message';
             chatMessages.appendChild(loadingElement);
@@ -143,7 +143,7 @@
             // Remove loading message
             loadingElement.remove();
 
-            // Display nexa's response with a typing effect
+            // Display glance's response with a typing effect
             let output = '';
             const responseElement = document.createElement('div');
             responseElement.className = 'message';
@@ -156,7 +156,7 @@
 
             for (const word of words) {
                 output += word + ' ';
-                responseElement.innerHTML = `Nexa: ${output}`;
+                responseElement.innerHTML = `Glance: ${output}`;
                 await new Promise(resolve => setTimeout(resolve, 1000/words.length)); // Adjust delay as needed
             }
         }
